@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark text-gray-100 min-h-screen;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-200 
+           hover:scale-105 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary hover:bg-primary-dark text-white;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary 
+           hover:bg-primary hover:text-white;
+  }
+
+  .input {
+    @apply w-full px-3 sm:px-4 py-2 sm:py-3 bg-dark-light rounded-lg border border-gray-700 
+           focus:outline-none focus:border-primary transition-colors;
+  }
+
+  .card {
+    @apply bg-dark-lighter rounded-xl p-4 sm:p-6 shadow-lg;
+  }
+}
