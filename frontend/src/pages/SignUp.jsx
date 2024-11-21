@@ -20,7 +20,7 @@ function SignUp({userData, setUserData}) {
       }
     },[userData])
 
-  const baseURL = "http://localhost:3002/api/"; // Replace with your actual API base URL
+  const baseURL = "https://fi-bot-samadhan.vercel.app/api/"; // Replace with your actual API base URL
 
   const handleSubmit = async (e) => {
     e.preventDefault();
