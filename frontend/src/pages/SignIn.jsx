@@ -20,7 +20,7 @@ function SignIn({ userData, setUserData}) {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const baseURL = "https://fi-bot-samadhan.vercel.app/api/"; // Replace with your actual API base URL
+  const baseURL = "https://fi-bot-samadhan.vercel.app"; // Replace with your actual API base URL
 
   const handleSubmit = async (e) => {
     e.preventDefault();

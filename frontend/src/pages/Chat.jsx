@@ -25,7 +25,7 @@ function Chat({userData, setUserData}) {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const baseURL = "https://fi-bot-samadhan.vercel.app/api/"; // Replace with your actual API base URL
+  const baseURL = "https://fi-bot-samadhan.vercel.app"; // Replace with your actual API base URL
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
