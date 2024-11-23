@@ -6,6 +6,7 @@ import Chat from './pages/Chat';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import UseLocalStorage from './utils/UseLocalStorage';
+import ExpenseTracker from './pages/ExpenseTracker';
 
 function App() {
   const [userData, setUserData] = UseLocalStorage("userData", "");
@@ -20,6 +21,7 @@ function App() {
             <Route path="/chat" element={<Chat userData={userData} setUserData={setUserData} />} />
             <Route path="/signin" element={<SignIn userData={userData} setUserData={setUserData} />} />
             <Route path="/signup" element={<SignUp userData={userData} setUserData={setUserData} />} />
+            <Route path="/expensetracker" element={<ExpenseTracker userData={userData} setUserData={setUserData} />} />
           </Routes>
         </main>
         <Footer />

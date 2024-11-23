@@ -13,10 +13,6 @@ function Chat({userData, setUserData}) {
       ? JSON.parse(saved)
       : [
         { id: 1, type: "bot", text: "Hello! I'm Fi-Bot, your AI financial advisor. How can I help you today?" },
-        { id: 2, type: "user", text: "Can you help me with stock investments?" },
-        { id: 3, type: "bot", text: "Of course! I can provide stock analysis, market insights, and personalized investment recommendations. What specific aspect would you like to explore?" },
-        { id: 4, type: "user", text: "What are the best tech stocks to invest in?" },
-        { id: 5, type: "bot", text: "Based on current market analysis, leading tech companies like AAPL, MSFT, and GOOGL show strong potential. However, I recommend diversifying your portfolio. Would you like a detailed analysis of these stocks?" },
       ];
   });
 
@@ -25,7 +21,7 @@ function Chat({userData, setUserData}) {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const baseURL = "https://fi-bot-back.vercel.app/api/"; // Replace with your actual API base URL
+  const baseURL = "http://localhost:3005/api/"; // Replace with your actual API base URL
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -117,7 +113,7 @@ function Chat({userData, setUserData}) {
 
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-4 sm:py-8 h-[calc(100vh-144px)]">
+    <div className="max-w-4xl mx-auto px-4 py-4 sm:py-8 h-[calc(100vh-64px)]">
       <div className="card h-full flex flex-col">
         <div className="flex-grow overflow-y-auto p-4 space-y-4">
           {messages.map((message) => (

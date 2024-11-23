@@ -1,7 +1,6 @@
 import { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiMailLine, RiLockLine, RiUser3Line } from 'react-icons/ri';
-import UseLocalStorage from '../utils/UseLocalStorage';
 
 function SignUp({userData, setUserData}) {
 
@@ -20,7 +19,7 @@ function SignUp({userData, setUserData}) {
       }
     },[userData])
 
-  const baseURL = "https://fi-bot-back.vercel.app/api/"; // Replace with your actual API base URL
+  const baseURL = "http://localhost:3005/api/"; // Replace with your actual API base URL
 
   const handleSubmit = async (e) => {
     e.preventDefault();

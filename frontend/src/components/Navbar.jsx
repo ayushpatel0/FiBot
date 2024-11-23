@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiRobot2Fill, RiMenuLine, RiCloseLine } from 'react-icons/ri';
-import UseLocalStorage from '../utils/UseLocalStorage';
 
 function Navbar({ userData, setUserData }) {
   // const [userData, setUserData] = UseLocalStorage("userData", "");
@@ -32,11 +31,14 @@ function Navbar({ userData, setUserData }) {
           <Link to="/chat" className="text-gray-300 hover:text-white">Chat</Link>
           {
             userData !== ""? (
-              <div
-                className="text-gray-300 hover:text-white py-2 btn-outline cursor-pointer"
-                onClick={deleteData}
-              >
-                Logout
+              <div className="flex items-center space-x-4">
+                <div
+                  className="text-gray-300 hover:text-white py-2 btn-outline cursor-pointer"
+                  onClick={deleteData}
+                >
+                  Logout
+                </div>
+                  <Link to="/expensetracker"  className='text-gray-300 hover:text-white py-2 btn-outline cursor-pointer'>Expense Tracker</Link>
               </div>
             ) : (
               <div className="flex items-center space-x-4">
