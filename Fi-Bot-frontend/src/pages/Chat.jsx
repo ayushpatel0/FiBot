@@ -27,7 +27,7 @@ function Chat({ userData, setUserData }) {
 
   const messagesEndRef = useRef(null);
 
-  const baseURL = "http://localhost:3005/api/";
+  const baseURL = "https://fi-bot-snowy.vercel.app/api/";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
